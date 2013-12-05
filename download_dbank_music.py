@@ -15,8 +15,11 @@ url = "http://119.186.162.231/file/MDAwMDAwMDFkE9p_DWds5EypZM-orIhkfYVNYHW_znzjN
 req = urllib2.Request(url)
 req.add_header('Referer', 'http://dl.vmall.com/c0wvztqyyv')
 
-
+#proxy
 urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler({"http":"http://weixianlong:weixianlong@192.168.16.189:8080"})))
+#without proxy
+urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler()))
+
 
 f = urllib2.urlopen(req)
 
